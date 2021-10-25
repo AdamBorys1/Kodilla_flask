@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    {% extends "base.html" %}
+    {% block head %}
+        {{ super() }}
+    {% endblock %}
+
+  </head>
+  <body>
+
+    {% block about %}
+
+    <br/>
+    <h2>O mnie</h2>
+
+    <p>Nazywam się <strong>Adam Borys</strong></p>
+    <br/><br/>
+    {% endblock %}
+
+  </body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    {% block head %}
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css"/>
+    <title>Moja strona</title>
+    {% endblock %}
+  </head>
+  <body>
+    {% block home %}
+    <h1>Witaj na mojej stronie!</h1> <br/>
+    <img src="../static/Einstein.jpg" alt="Albert Einstein" title="Twórca teorii względności">
+    {% endblock %}
+    {% block about %}
+    {% endblock %}
+
+    {% block contact %}
+    {% endblock %}
+
+  </body>
+</html>

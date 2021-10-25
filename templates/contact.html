@@ -1,0 +1,23 @@
+
+    {% extends "base.html" %}
+    {% block head %}
+    {{ super() }}
+    {% endblock %}
+
+    {% block contact %}
+
+    <h2>Kontakt</h2>
+
+    <ul>
+        <li>email: adam@interia.pl</li>
+        <li>telefon: 462728167</li>
+    </ul>
+
+    <h3>Wyślij wiadomość</h3>
+    <form action="" method="POST">
+      <label>First name</label>
+      <input name="firstname"/>
+      <input type="submit"/>
+    </form>
+
+    {% endblock %}
