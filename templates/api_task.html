@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Przelicznik walut</title>
+    </head>
+    <body>
+        <form action="{{ ('api_task') }}" method="POST">
+            <label for="currency">Wybierz walutę:</label>
+            <select name="currency">
+                {% for i in code_list %}
+                <option value="{{i}}">{{i}}</option>
+                {% endfor %}
+            </select>
+            <label for="amount">Wpisz ilość:</label>
+            <input type="number" name="amount" value="amount">
+            <input type="submit" value="Przelicz">
+        </form>
+    </body>
+</html>
+
+
