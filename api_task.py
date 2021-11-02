@@ -29,18 +29,21 @@ with open("api_task.csv", "w") as csvfile:
         writer.writerow({"currency":currency, "code":code, "bid":bid, "ask":ask})
 
 
+
 @app.route("/api_task", methods = ["GET", "POST"])
 def api_task():
     if request.method == "GET":
         return render_template("api_task.html", items=items, currency=currency, currency_dict=currency_dict, code=code, ask=ask, code_list=code_list)
     elif request.method == "POST":
-        request.form['currency']
-        request.form['amount']
-        result = currency * amount
-        return render_template("result.html")
+        cash = request.form['currency']
+        amount = request.form['amount']
+        cash_value = currency_dict.get(cash)
+        result = cash_value * float(amount)
+        return render_template("result.html", result=result, amount=amount)
 
 
 if __name__ == "__main__":
-   app.run(debug=False)
+  app.run(debug=False)
+
 
 
